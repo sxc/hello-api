@@ -1,1 +1,8 @@
-GO_VERSION := 1.20
+build:
+	@go build -o api cmd/main.go
+
+run: build
+	@./api
+
+test:
+	@go test -v ./...
